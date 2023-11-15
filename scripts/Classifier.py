@@ -38,14 +38,14 @@ class Classifier():
         self.humorous_headlines_dataset = datasets.load_dataset("csv", data_files={
             "train": train_path, "validation": devlopment_path})
         #traines the model using bidirectional neural network layer and saves the model into a model file
-        self.humorous_headlines_dataset = self.humorous_headlines_dataset.map(self.tokenize, batched=True)
+        self.dataset = self.dataset.map(self.tokenize, batched=True)
 
-        train = self.humorous_headlines_dataset["train"].to_tf_dataset(
+        train = self.dataset["train"].to_tf_dataset(
             columns="input_ids",
             label_cols="LABEL",
             batch_size=16,
             shuffle=True)
-        devlopment = self.humorous_headlines_dataset["validation"].to_tf_dataset(
+        devlopment = self.dataset["validation"].to_tf_dataset(
             columns="input_ids",
             label_cols="LABEL",
             batch_size=16)
@@ -99,10 +99,10 @@ class Classifier():
         test_data = pd.read_csv(path)
 
         # create input features in the same way as in train()
-        self.humorous_headlines_dataset = datasets.Dataset.from_pandas(test_data)
-        self.humorous_headlines_dataset = self.humorous_headlines_dataset.map(self.tokenize, batched=True)
+        self.dataset = datasets.Dataset.from_pandas(test_data)
+        self.dataset = self.dataset.map(self.tokenize, batched=True)
         
-        tf_dataset = self.humorous_headlines_dataset.to_tf_dataset(
+        tf_dataset = self.dataset.to_tf_dataset(
             columns="input_ids",
             batch_size=16)
         
