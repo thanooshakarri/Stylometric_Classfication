@@ -13,15 +13,18 @@ This repository contains a trained model that classifies text, if both the texts
 
 Files:
 ```
-├── README.md            <- Introduction of repository
-├── model                <- Trained model
-├── requirements.txt     <- Python packages requirement file
-├── data                 <- Dataset
-|   |____ train.csv      <- Train data
-|   |____ test.csv       <- Test data
-├── src                  <- Source code
-|   |____ Classifier.py  <- Neural Network
-|____ Main.ipynb         <- main function 
+├── README.md                <- Introduction of repository
+├── model                    <- Trained model
+├── requirements.txt         <- Python packages requirement file
+├── data                     <- Dataset
+|   |____ train.csv          <- Train data
+|   |____ dev.csv            <- Validation data
+|   |____ left-out-data.csv  <- left out data
+|   |____ test.csv           <- Test data
+|   |____ train-dev.csv      <- train+dev data
+├── src                      <- Source code
+|   |____ Classifier.py      <- Neural Network
+|____ Main.ipynb             <- main function 
 ```
 Usage:
 ```
