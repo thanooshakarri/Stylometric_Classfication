@@ -12,19 +12,19 @@ Given two spans of text, determine if both spans were produced by the same autho
 This repository contains a trained model that classifies text, if both the texts are by the same author or not. My neural network is trained by using distil-RoBERTa embedding in a Bi-directional Gated Recurrent Unit.
 
 Files:
-
-├── README.md             <- Introduction of repository
-├── model                 <- Trained model
-├── requirements.txt      <- Python packages requirement file
-├── data                  <- Dataset
-|   |____ train.csv       <- Train data
-|   |____ test.csv        <- Test data
-├── src                   <- Source code
-|   |____ Classifier.py   <- Neural Network
+```
+├── README.md            <- Introduction of repository
+├── model                <- Trained model
+├── requirements.txt     <- Python packages requirement file
+├── data                 <- Dataset
+|   |____ train.csv      <- Train data
+|   |____ test.csv       <- Test data
+├── src                  <- Source code
+|   |____ Classifier.py  <- Neural Network
 |____ Main.ipynb         <- main function 
-
+```
 Usage:
-
+```
 Install the required libraries listed in requirements.txt by running pip install -r requirements.txt in your terminal.
 
 Open the Main.ipynb notebook in Jupyter or any compatible platform.
@@ -38,3 +38,4 @@ To make predictions upload the file namming it test.csv.
 The test file should contain a column TEXT with the text.
 
 The model is loaded and predicttions are made and the results are saved into predictions.csv file
+```
