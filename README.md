@@ -35,6 +35,26 @@ Open the Main.ipynb notebook in Jupyter or any compatible platform.
 The trained model is in the model folder.
 
 The Classifier.py contains the files to train the model.
+Classifier class
+  train_test_split - to split the datainto train, validation set and test(left-out-data)
+  split            - split the sentence on "[SNIPPET]"
+  tokenize         -
+  get_pos_tags     - compute pos tags and count functional words for 2 text spans separately
+  count_punctuation- count "?", ",", ";", ".", ":", "'", '"', "!", "-" for 2 text spans separately
+  fit              - fit the model
+  predict          - make predictions
+  save_to_file     - saves predictions to predictions.csv
+  confusion_matrix - to build confusion matrix
+
+To train a model:
+  1.train_test_split
+  2. split
+  3. fit
+  4. predict
+  5. save_to_file
+
+To make predictions on the trained model-(already in model file)
+  1. save_to_file
 
 To make predictions upload the file namming it test.csv.
 
